@@ -90,7 +90,7 @@ $(function(){
     /*
     * 创建单个产品容器
     * @param   obj     json
-    * @param   f1,f2   left or right
+    * @param   f1,f2   float left or right
     * */
     function create(obj, f1, f2){
         var section = $('<section class="section clearfix">');

@@ -1,22 +1,3 @@
-/* 默认值 */
-html{font-size: 62.5%;color: #222;}
-body{font-family: brandon, "PingFang SC", "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, sans-serif;background-color: #F0F4F8;}
-/*body{font-family:  'Open Sans','open_sans','PingFang SC',"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",sans-serif;}*/
-ul{margin: 0;padding: 0;}
-li{list-style: none;}
-dd{margin: 0;}
-::selection{background-color: #b3d4fc;}
-a{text-decoration: none;}
-
-/* 工具样式 */
-.center-block{display: block;margin-left: auto;margin-right: auto;}
-.clearfix:before, .clearfix:after {content: " ";display: table;}
-.clearfix:after {clear: both;}
-.text-hide{font: 0/0 a;color: transparent;text-shadow: none;background-color: transparent;border: 0;}
-.ellipsis{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
-.fl{float: left;}
-.fr{float: right;}
-
 /* header开始 */
 header{
     overflow: hidden;
@@ -30,12 +11,12 @@ header{
     max-height: 768px;
     text-align: center;
 }
-video{
+.header-wrap video{
     /*width: 1358px;*/
     /*height: 768px;*/
     width: 100%;
 }
-.video-shade{
+.header-wrap .video-shade{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -44,7 +25,7 @@ video{
     opacity: .9;
     transition: 1s opacity;
 }
-.bg-img{
+.header-wrap .bg-img{
     width: 100%;
     height: 100%;
     background-image: url("../img/header.jpg");
@@ -236,6 +217,10 @@ h2{
     color: #4c585f;
 }
 
+.production-con{
+    padding-bottom: 10em;
+}
+
 @media only screen and (max-width: 980px){
     .section{
         text-align: center;
@@ -256,3 +241,88 @@ h2{
 
 }
 /* production结束 */
+
+/* intro开始 */
+.intro{
+    background: #fff;
+}
+.intro-wrap{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.face{
+    border: .5rem solid rgba(121,68,68,.2);
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    top: -6rem;
+    /*box-shadow: 0 0 4px 4px #ccc;*/
+}
+.face img{
+    vertical-align: top;
+    width: 160px;
+    height: 160px;
+}
+.intro-wrap p{
+    margin-top: -3rem;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #7d899c;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+}
+/* intro结束 */
+
+/* footer开始 */
+footer{
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+footer:before{
+    content: ' ';
+    display: table;
+}
+.foot-bg-img{
+    background-image: url("../img/header.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.foot-bg-shade{
+    background: rgb(49,40,72);
+    position: absolute;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.logo{
+    font-family: Pattaya;
+    font-size: 6rem;
+    color: #fff;
+    margin-top: 10rem;
+    cursor: default;
+}
+footer h2{
+    color: #fff;
+}
+footer .text{
+    font-size: 1.6rem;
+    color: #fff;
+}
+footer .text a{
+    color: #fff;
+    transition: .5s color;
+}
+footer .text a:hover{
+    color: #FF00B1;
+}
+footer .copyright{
+    padding-bottom: 5rem;
+}
+/* footer结束 */
