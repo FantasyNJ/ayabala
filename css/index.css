@@ -1,13 +1,21 @@
 /* 默认值 */
 html{font-size: 62.5%;color: #222;}
-body{font-family: brandon, "PingFang SC", "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, sans-serif;}
+body{font-family: brandon, "PingFang SC", "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, sans-serif;background-color: #F0F4F8;}
 /*body{font-family:  'Open Sans','open_sans','PingFang SC',"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",sans-serif;}*/
 ul{margin: 0;padding: 0;}
 li{list-style: none;}
 dd{margin: 0;}
 ::selection{background-color: #b3d4fc;}
 a{text-decoration: none;}
-/*a:hover{text-decoration: underline;}*/
+
+/* 工具样式 */
+.center-block{display: block;margin-left: auto;margin-right: auto;}
+.clearfix:before, .clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+.text-hide{font: 0/0 a;color: transparent;text-shadow: none;background-color: transparent;border: 0;}
+.ellipsis{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.fl{float: left;}
+.fr{float: right;}
 
 /* header开始 */
 header{
@@ -90,7 +98,7 @@ h1{
 }
 
 .login{
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 30px;
     background-color: #5a4776;
@@ -107,13 +115,18 @@ h1{
     opacity: 1;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 980px){
 
 }
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-
+@media only screen and (min-width: 651px) and (max-width: 980px) {
+    .header-wrap{
+        width: 980px;
+    }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 650px) {
+    .header-wrap{
+        width: 800px;
+    }
     .header-con strong{
         font-size: 4rem;
     }
@@ -123,3 +136,123 @@ h1{
 }
 
 /* header结束 */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+/* production开始 */
+.production:before{
+    content: ' ';
+    display: table;
+}
+.production{
+    width: 90%;
+    margin: 0 auto;
+}
+h2{
+    font-size: 3.2rem;
+    text-align: center;
+    color: #52667a;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+.small-title{
+    color: #8692a1;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.section{
+    margin-top: 5rem;
+}
+.section .website{
+    width: 54%;
+    height: 100%;
+    /*float: left;*/
+    position: relative;
+    padding-bottom: 3%;
+}
+.section .website .screen{
+    width: 90%;
+    padding: 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #9fa5ad;
+    background: linear-gradient(to bottom left, #ecf2f4,#d0d5d7);
+}
+.section .website:after{
+    position: absolute;
+    content: ' ';
+    display: block;
+    border: 2px solid #9fa5ad;
+    border-radius: 4% 4% 60% 60%;
+    width: 108%;
+    left: -4%;
+    height: 2%;
+    background: linear-gradient(to bottom,#ecf2f4,#b7bcc6 20%,#838b97);
+}
+.section .website img{
+    width: 100%;
+}
+.section .website .img-s{
+    width: 100%;
+}
+.section .website .phone{
+    position: absolute;
+    width: 21%;
+    top: 28%;
+    left: 78%;
+    padding: 3.5% .5%;
+    border-radius: 12px;
+    border: 2px solid #9fa5ad;
+    background: linear-gradient(to bottom left,#fff,#e0e6e8);
+    z-index: 1;
+}
+
+
+
+
+.section .desc{
+    width: 46%;
+    /*float: right;*/
+    box-sizing: border-box;
+    padding: 1rem 2rem 0 4rem;
+}
+.section .desc h3{
+    font-weight: normal;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #5f3f39;
+}
+.section .desc .title{
+    color: #ad8379;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.section .desc .con{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #4c585f;
+}
+
+@media only screen and (max-width: 980px){
+    .section{
+        text-align: center;
+    }
+    .section .website, .section .desc{
+        width: 90%;
+        float: none;
+        display: inline-block;
+    }
+    .section .desc{
+        padding: 1rem;
+    }
+}
+@media only screen and (min-width: 651px) and (max-width: 980px) {
+
+}
+@media only screen and (max-width: 650px) {
+
+}
+/* production结束 */
