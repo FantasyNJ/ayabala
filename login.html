@@ -8,15 +8,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>ayabala 注册/登录</title>
     <link href="https://fonts.lug.ustc.edu.cn/css?family=Pattaya" rel="stylesheet">
-    <link rel="stylesheet" href="css/narmalize.css">
+    <link rel="stylesheet" href="./css/narmalize.css">
     <link rel="stylesheet" href="./css/initial.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-<form action="" method="get" class="login">
-    <input type="text" placeholder="用户名">
-    <input type="password" placeholder="密码">
+<form action="" method="post" class="login">
+    <input type="text" placeholder="用户名" name="username">
+    <p class="username-tips"></p>
+    <input type="password" placeholder="密码" name="password">
+    <p class="password-tips"></p>
     <button type="submit">登录</button>
 </form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<form action="" method="post" class="resigister">
+    <input type="text" placeholder="用户名" name="username">
+    <p class="username-tips"></p>
+    <input type="password" placeholder="密码" name="password">
+    <p class="password-tips"></p>
+    <input type="password" placeholder="密码" name="repassword">
+    <p class="repassword-tips"></p>
+    <button type="submit">注册</button>
+</form>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 </body>
 </html>
