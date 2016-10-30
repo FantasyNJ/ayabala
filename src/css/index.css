@@ -62,13 +62,7 @@ nav span a:hover{
     color: #FF00B1;
 }
 
-h1{
-    font-family: Pattaya;
-    font-size: 6rem;
-    color: #fff;
-    margin-top: 10rem;
-    cursor: default;
-}
+
 .header-con strong{
     font-size: 5rem;
     font-weight: normal;
@@ -81,7 +75,7 @@ h1{
     color: #d2c4f9;
 }
 
-.login{
+.h-btn{
     position: absolute;
     top: 30px;
     right: 30px;
@@ -94,6 +88,8 @@ h1{
     z-index: 100;
     opacity: .8;
     letter-spacing: 2px;
+    vertical-align: top;
+    display: none;
 }
 .login:hover{
     opacity: 1;

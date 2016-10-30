@@ -16,3 +16,13 @@ a{text-decoration: none;}
 .ellipsis{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
 .fl{float: left;}
 .fr{float: right;}
+
+/* 内容公共样式 */
+h1{
+    font-family: Pattaya;
+    font-size: 6rem;
+    color: #fff;
+    margin-top: 10rem;
+    cursor: default;
+    text-align: center;
+}

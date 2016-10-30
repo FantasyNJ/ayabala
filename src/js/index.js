@@ -1,3 +1,13 @@
+//判断是否登录
+$(function(){
+    if(window.localStorage.username){   //已经登录
+        $('.h-btn.comments').css('display', 'block');
+    }else{
+        $('.h-btn.login').css('display', 'block');
+    }
+})
+
+
 //头部内容居中
 $(function(){
     var headerWrap = $('.header-wrap');
@@ -15,11 +25,21 @@ $(function(){
         headerWrap.css('left', -l);
     }
     //视频可以播放时隐藏图片
-    video.one('canplay',function(){
-        videoShade.css('opacity', .5);
-        bgImg.css('opacity', 0);
-        this.play();
-    })
+    //修改火狐浏览器的BUG
+    if(window.navigator.userAgent.indexOf('Firefox') !== -1){
+        setTimeout(function(){
+            videoShade.css('opacity', .5);
+            bgImg.css('opacity', 0);
+            video[0].play();
+        },1000);
+    }else{   //其他浏览器
+        video.one('canplay',function(){
+            videoShade.css('opacity', .5);
+            bgImg.css('opacity', 0);
+            this.play();
+        })
+    }
+
 })
 //作品展示
 $(function(){
