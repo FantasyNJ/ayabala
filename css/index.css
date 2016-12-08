@@ -209,6 +209,9 @@ h2{
     margin-bottom: 1rem;
     color: #5f3f39;
 }
+.section .desc h3 a{
+    color: #5f3f39;
+}
 .section .desc .title{
     color: #ad8379;
     font-size: 1.6rem;
